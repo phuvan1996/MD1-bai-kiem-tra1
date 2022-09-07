@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2><label>nhap so tuoi</label></h2>
+<input id="enter" type="text" onclick="reset()">
+<button onclick="SoTuoi()">kiểm tra</button>
+<h3 id="ketQua"></h3>
+<h3 id="tuoicuaanh"></h3>
+<h3 id="tuoicuabo"></h3>
+<script>
+    function reset() {
+        document.getElementById('ketQua').innerText
+        document.getElementById('tuoicuaanh').innerText
+        document.getElementById('tuoicuabo').innerText
+    }
+    function SoTuoi() {
+        let tuoiEm = +document.getElementById('enter').value
+        let tuoiAnh = tuoiEm+3
+        let tuoiBo = tuoiAnh*6
+        if(tuoiEm<=0){
+            document.getElementById('ketQua').innerHTML = '  '
+        }else{
+            document.getElementById('tuoicuaanh').innerHTML = 'tuoi cua anh: '+tuoiAnh
+            document.getElementById('tuoicuabo').innerHTML = 'tuoi cua bo: '+tuoiBo
+        }
+    }
+</script>
+</body>
+</html>
